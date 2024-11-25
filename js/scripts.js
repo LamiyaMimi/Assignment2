@@ -10,197 +10,112 @@
 // //dfdfd
 
 
-var firstName ="This my date of birth";
-var lastName ="17 october 2003";
-
-console.log(firstName + " " +lastName);
-
-
-
-var num1= 50;
-var num2= 3;
-var multiplication = num1 * num2;
-console.log(multiplication)
-
-
-var num1= 1000;
-var num2= 2;
-var division= num1/num2;
-console.log(division);
-
-
-var fullName = "Lamiya mimi";
-console.log(fullName.length);
-
-console.log(fullName[4]);
-
-var fullName = "Lamiya Mimi";
-console.log(fullName.replace("Mimi" , "Hamduna"));
-
-
-var power = Math.pow(10,12);
-console.log(power);
-
-
-var squareRoot = Math.sqrt(169);
-console.log(squareRoot);
-
-var randomNumber = Math.random();
-console.log(randomNumber);
-
-
-var count = "40.05";
-var count2 = "20";
-
-var sum = parseFloat(count) + parseInt(count2);
-
-console.log(sum);
-
-
-var birthday = "17 october";
-var currentDate = "21 october";
- if(currentDate === "17 october" ) {
-    console.log("happy birhday")
- } else{
-    console.log("sorry")
- }
-
-
-
- var birthday = "17 october";
- var currentDate = "21 october";
-  if(currentDate >= "21 october" ) {
-     console.log("happy birhday")
-  } else{
-     console.log("sorry")
-  }
- 
- 
-
-  function minusNumber(num1,num2) {
-   
-   var result = num1 - num2;
-   console.log(result);
-   alert(result)
- 
- 
-  }
-      
-  
-
-  minusNumber(1024,128);
-
-
-
-  function divisionNumber(num1,num2) {
-   
-   var result = num1/num2;
+function divisionNumbers(c) {
+   var result = (9 * c / 5) + 32;
    return result;
- 
-  }
-      
-  
-
- var divisionResult = divisionNumber(1024,128);
- alert(divisionResult)
-
- var divisionResult1 = divisionNumber(1000,100);
- alert(divisionResult1)
-
- var divisionResult2 = divisionNumber(5000,100);
- alert(divisionResult2)
 
 
-
-function divisionNumber(c) {
-
-   var result =  (9 * c/ 5) + 32
-   return result;
 }
+var divisionResult = divisionNumbers(38);
 
-var divisionResult = divisionNumber(38);
-console.log( divisionResult);
-document.getElementById("fahr_1").innerHTML =divisionResult;
+document.getElementById("fahr_1").innerHTML = divisionResult;
 
-
-
-
-function divisionNumber(c) {
-
-   var result =  (9 * c/ 5) + 32
+function divisionNumbers(c) {
+   var result = (9 * c / 5) + 32;
    return result;
+
+
 }
+var divisionResult = divisionNumbers(24);
 
-var divisionResult = divisionNumber(24);
-console.log( divisionResult);
-document.getElementById("fahr_2").innerHTML =divisionResult;
-
+document.getElementById("fahr_2").innerHTML = divisionResult;
 
 
-function divisionNumber(c) {
-
-   var result =  (9 * c/ 5) + 32
+function divisionNumbers(c) {
+   var result = (9 * c / 5) + 32;
    return result;
+
+
 }
+var divisionResult = divisionNumbers(-1);
 
-var divisionResult = divisionNumber(-1);
-console.log( divisionResult);
-document.getElementById("fahr_3").innerHTML =divisionResult;
+document.getElementById("fahr_3").innerHTML = divisionResult;
+ 
 
+// 2) The array below is the classification of students in a contest.
+// It is ordered from lowest to highest grades.
+var classification = ["John Hill","Mary Jane","Gary Vee","Paricia Mills","Helen Hall", "Paul Green"];
 
-
-var classification = [ "John Hill" , "Mary Jane", "Gary Vee", "Paricia Mills", "Helen Hall", "Paul Green" ]; 
-classification.shift();
-console.log(classification);
-classification.shift();
-console.log(classification);
 classification.shift();
 console.log(classification);
 
+var classification = [ "Mary Jane", "Gary Vee", "Paricia Mills", "Helen Hall", "Paul Green"];
 
-document.getElementById("best_students").innerHTML = classification;
+classification.shift();
+console.log(classification);
+
+var classification = ["Gary Vee", "Paricia Mills", "Helen Hall", "Paul Green"];
+
+classification.shift();
+console.log(classification);
+
+document.getElementById("best_students").innerHTML=classification
 
 
+// 3) Consider the object below:
 var course = {
-   'title': "Learn to Code in Python 3",
-   'categories': ['programming', 'technology', 'python'],
-   '5_stars_reviews': 420,
-   '4_stars_reviews': 80,
-   '3_stars_reviews': 33,
-   '2_stars_reviews': 20,
-   '1_stars_reviews': 4
-}
-console.log(course[0]['title'][0]);
-document.getElementById("course_title").innerHTML =course[0]['title'][0];
-
-
-
-document.getElementById("color_button").onclick = function () {
-   document.getElementById("color_button2").style.background = "yellow";
-   document.getElementById("color_button2").style.display = "inline";
-   document.getElementById("crossButton").style.display = "inline";
+    'title': "Learn to Code in Python 3",
+    'categories': ['programming', 'technology', 'python'],
+    '5_stars_reviews': 420,
+    '4_stars_reviews': 80,
+    '3_stars_reviews': 33,
+    '2_stars_reviews': 20,
+    '1_stars_reviews': 4
 };
-document.getElementById("crossButton").onclick = function () {
-   document.getElementById("color_button2").style.display = "none";
-   document.getElementById("crossButton").style.display = "none";
-}
 
+// (a)
 
+console.log(course.title);
+document.getElementById("course_title").innerHTML=course.title
 
+// (b)
+console.log(course['categories'][0]);
+document.getElementById("main_category").innerHTML = course['categories'][0];
 
-var clickButton = document.getElementById("color_button");
-var showButton = document.getElementById("hide");
+// c) Create a method to calculate the percentage of 5 stars
+//  reviews rounded with no decimal places and show the result below:
+function number (num1,num2,num3,num4,num5){
+    var sum = num1+num2+num3+num4+num5;
+    console.log(sum);
+   }
 
-clickButton.onclick = function () {
-   document.getElementById("box2").classList.add("show");
-
-
-}
-
-// showButton.onclick = function () {
-//    document.getElementById("box2").classList.remove("show");
-//    +
-// }
-
-
-
+   number(420,80,33,20,4);
+   var average=(420/557)*100;
+   console.log(average);
+   
+   var roundNumber = Math.round(75.40394973070018);
+   console.log(roundNumber);
+   
+   
+   var name ="75";
+   name +="%";
+   console.log(name);
+   document.getElementById("reviews_5_stars").innerHTML = name;
+   
+   
+   // 4) See the shopping list below:
+   
+   var shoppingList = ["Milk", "Butter", "Juice", "Bread", "Beer", "Rice", "Potatoes", "Chocolate"]; 
+   shoppingList.pop();
+   shoppingList.shift();
+   shoppingList.unshift("chocolate");
+   console.log(shoppingList);
+   
+   
+   // .)
+   
+   var shoppingList = ["Milk", "Butter", "Juice", "Bread", "Beer", "Rice", "Potatoes", "Chocolate"];
+   
+   shoppingList.push("cheese");
+   shoppingList.push("Eggs");
+   console.log(shoppingList);
